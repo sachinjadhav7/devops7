@@ -11,7 +11,14 @@ pipeline {
 		stage("dir") {
 			steps {
 				echo "hello world"
-			//	sh "mkdir dev"
+				sh "mkdir dev5"
+				}
+			}
+			
+		stage("continuous-download") {
+			steps {
+				git credentialsId: '774', url: 'https://github.com/sachin93094/new_devops.git'
+				sh "ls"
 				}
 			}
 		}
