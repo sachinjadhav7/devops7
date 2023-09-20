@@ -11,12 +11,12 @@ pipeline {
 							PROF = "devops"
 							BATCH = "july"
 			
-			
+			}
 			
 			
 	stages {
 		
-		stage("env") {
+		stage("dir") {
 			steps {
 				echo "hello world"
 				echo "${Name}"
