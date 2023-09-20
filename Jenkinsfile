@@ -6,12 +6,22 @@ pipeline {
 				}
 			}
 			
+			environment {
+							Name = "pavan"
+							PROF = "devops"
+							BATCH = "july"
+			
+			
+			
+			
 	stages {
 		
-		stage("dir") {
+		stage("env") {
 			steps {
 				echo "hello world"
-				sh "mkdir dev5"
+				echo "${Name}"
+				echo "${PROF}"
+				echo "${BATCH}"
 				}
 			}
 			
@@ -19,6 +29,7 @@ pipeline {
 			steps {
 				git credentialsId: '774', url: 'https://github.com/sachin93094/new_devops.git'
 				sh "ls"
+				
 				}
 			}
 		}
