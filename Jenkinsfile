@@ -11,7 +11,7 @@ pipeline {
 		stage("dir") {
 			steps {
 				echo "hello world"
-				sh "mkdir dev"
+			//	sh "mkdir dev"
 				}
 			}
 		}
